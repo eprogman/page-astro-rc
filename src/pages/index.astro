@@ -1,11 +1,208 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Linkandtext from "../components/Linkandtext.astro";
+import Sectionpreguntas from "../components/Sectionpreguntas.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import card from "../config/card.json";
+import enlaces from "../config/enlaces.json";
+import preguntas from "../config/preguntas.json";
+import Infobutton from "../components/Infobutton.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Index">
+	<!-- SECCION 1 -->
+	<section
+		class="my-9 flex justify-between w-full min-h-96 pt-2.5 items-center"
+	>
+		<div class="flex flex-col gap-y-10 w-3/4 items-center">
+			<h1 class="text-5xl text-cyan-200 font-serif w-5/6">
+				<span
+					class="bg-gradient-to-r from-teal-500 via-orange-500 to-yellow-500 text-transparent bg-clip-text"
+					>Pagina WEB</span
+				> de muestra, con HTML<span
+					class="bg-gradient-to-r from-teal-500 via-orange-500 to-yellow-500 text-transparent bg-clip-text"
+				>
+					y con Javascrip</span
+				>
+			</h1>
+
+			<p class="text-2xl text-cyan-50 w-5/6">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+				illum sed aliquid voluptas voluptatibus. Excepturi aut, iusto,
+				voluptate quis reiciendis cupiditate veniam vero vel explicabo
+				similique labore quaerat, tenetur <span id="cursos"
+					>asperiores.</span
+				>
+			</p>
+			<Infobutton
+				><svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="icon icon-tabler icons-tabler-outline icon-tabler-info-circle"
+					><path stroke="none" d="M0 0h24v24H0z" fill="none"
+					></path><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"
+					></path><path d="M12 9h.01"></path><path d="M11 12h1v4h1"
+					></path></svg
+				>Información</Infobutton
+			>
+			<div class="flex text-amber-50">
+				<a class="mx-2" href="">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="40"
+						height="40"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"
+						><path stroke="none" d="M0 0h24v24H0z" fill="none"
+						></path><path
+							d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+						></path></svg
+					>
+				</a>
+				<a class="mx-2" href="">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="40"
+						height="40"
+						viewBox="0 0 24 24"
+						fill="currentColor"
+						class="icon icon-tabler icons-tabler-filled icon-tabler-mail"
+						><path stroke="none" d="M0 0h24v24H0z" fill="none"
+						></path><path
+							d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z"
+						></path><path
+							d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z"
+						></path></svg
+					>
+				</a>
+
+				<a class="mx-2" href="">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="40"
+						height="40"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
+						><path stroke="none" d="M0 0h24v24H0z" fill="none"
+						></path><path
+							d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+						></path><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"
+						></path><path d="M16.5 7.5v.01"></path></svg
+					>
+				</a>
+				<a class="mx-2" href="">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="40"
+						height="40"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"
+						><path stroke="none" d="M0 0h24v24H0z" fill="none"
+						></path><path
+							d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"
+						></path></svg
+					>
+				</a>
+			</div>
+		</div>
+
+		<div class="hidden md:block md:w-1/4 h-98 rounded-2xl">
+			<img
+				class="rounded-2xl h-full m-auto w-full object-cover"
+				src="images/winst.jpg"
+				alt="image"
+			/>
+		</div>
+	</section>
+
+	<!-- SECCION 2 -->
+	<section class="mt-10 flex flex-col w-full">
+		<div class="text-xl text-center mx-3 text-cyan-200 pb-4">
+			<h1>Especialización: Serie de cursos de cursos</h1>
+		</div>
+		<section class="grid w-full ml-10 lg:ml-0 lg:grid-cols-3 lg:gap-x-20">
+			{
+				card.map((dato) => {
+					return (
+						<Card
+							image={dato.imagen}
+							title={dato.title}
+							description={dato.description}
+							card={dato.card}
+						/>
+					);
+				})
+			}
+		</section>
+	</section>
+
+	<!-- SECCION 3 -->
+	<section class="flex flex-col items-center py-8 lg:px-2 text-white w-full">
+		<div class="text-center text-2xl mb-7 mt-4">
+			<h2>
+				Adquiere el <span class="text-amber-600">conocimiento</span> y ventajas
+				de formar parte del <span class="text-amber-600">curso</span>
+			</h2>
+		</div>
+
+		<div
+			class="flex flex-col gap-x-4 px-2 sm:px-2 xl:gap-x-0 md:flex-row justify-around w-full"
+		>
+			{
+				enlaces.map((enlace) => {
+					return (
+						<Linkandtext
+							title={enlace.title}
+							tema={enlace.tema}
+							enlace={enlace.enlace}
+						/>
+					);
+				})
+			}
+		</div>
+	</section>
+
+	<!-- SECCION 4 -->
+	<section
+		class="flex gap-4 p-8 m-auto items-center text-white w-full justify-around"
+	>
+		<div class="hidden xl:block xl:w-2/5 pl-28">
+			<h1 class="text-5xl w-1/2">Preguntas frecuentes</h1>
+		</div>
+		<div class="flex flex-col xl:w-3/5">
+			{
+				preguntas.map((pregunta) => {
+					return (
+						<Sectionpreguntas
+							title={pregunta.title}
+							description={pregunta.description}
+						/>
+					);
+				})
+			}
+		</div>
+	</section>
 </Layout>

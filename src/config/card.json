@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Proyectos",
+        "description": "Diseños en varios diseños",
+        "card": "proyectos.html",
+        "imagen": "images/proyectos.jpg"
+    },
+    {
+        "title": "Actividades",
+        "description": "Diseños en varios proyectos",
+        "card": "actividades.html",
+        "imagen": "images/actividades.jpg"
+    },
+    {
+        "title": "Temas",
+        "description": "Temas de Ingenieria",
+        "card": "temas.html",
+        "imagen": "images/temas.jpg"
+    }
+]

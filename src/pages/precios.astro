@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Price from "../components/Price.astro";
+import goumbik from "../../public/images/goumbik.jpg";
+import leer from "../../public/images/leer.jpg";
+import pix2 from "../../public/images/pix2.jpg";
+---
+
+<Layout title="Precios">
+    <section class="grid grid-cols-3 gap-x-5 min-h-screen">
+        <Price
+            title="Contabilida"
+            description="curso de contabilidad"
+            precio="s/.100"
+            imagen={goumbik.src}
+        />
+        <Price
+            title="Ingenieria"
+            description="curso de Ingenieria"
+            precio="s/.200"
+            imagen={leer.src}
+        />
+        <Price
+            title="Marketing"
+            description="curso de Marketing"
+            precio="s/.300"
+            imagen={pix2.src}
+        />
+    </section>
+</Layout>
