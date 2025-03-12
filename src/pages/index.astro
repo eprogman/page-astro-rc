@@ -13,10 +13,10 @@ import Infobutton from "../components/Infobutton.astro";
 <Layout title="Index">
 	<!-- SECCION 1 -->
 	<section
-		class="my-9 flex justify-between w-full min-h-96 pt-2.5 items-center"
+		class="my-9 flex justify-between min-h-96 pt-2.5 items-center lg:w-5/6"
 	>
-		<div class="flex flex-col gap-y-10 w-3/4 items-center">
-			<h1 class="text-5xl text-cyan-200 font-serif w-5/6 pl-4 sm:pl-0">
+		<div class="flex flex-col gap-y-10 w-3/4 items-center m-auto">
+			<h1 class="text-4xl ml-3 text-cyan-200 font-serif sm:pl-0">
 				<span
 					class="bg-gradient-to-r from-teal-500 via-orange-500 to-yellow-500 text-transparent bg-clip-text"
 					>Pagina WEB</span
@@ -27,7 +27,7 @@ import Infobutton from "../components/Infobutton.astro";
 				>
 			</h1>
 
-			<p class="text-2xl text-cyan-50 w-5/6 pl-4 sm:pl-0">
+			<p class="text-xl text-cyan-50 ml-3 sm:pl-0 lg:text-2xl">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
 				illum sed aliquid voluptas voluptatibus. Excepturi aut, iusto,
 				voluptate quis reiciendis cupiditate veniam vero vel explicabo
@@ -139,11 +139,11 @@ import Infobutton from "../components/Infobutton.astro";
 	</section>
 
 	<!-- SECCION 2 -->
-	<section class="mt-10 flex flex-col w-full">
-		<div class="text-xl text-center mx-3 text-cyan-200 pb-4">
+	<section class="mt-7 flex flex-col w-5/6 lg:w-full">
+		<div class="text-sm sm:text-xl text-center text-cyan-200 pb-4">
 			<h1>Especialización: Serie de cursos de cursos</h1>
 		</div>
-		<section class="grid w-full ml-10 lg:ml-0 lg:grid-cols-3 lg:gap-x-20">
+		<div class="grid xl:w-4/5 sm:grid-cols-3 lg:gap-10 xl:m-auto">
 			{
 				card.map((dato) => {
 					return (
@@ -156,12 +156,14 @@ import Infobutton from "../components/Infobutton.astro";
 					);
 				})
 			}
-		</section>
+		</div>
 	</section>
 
 	<!-- SECCION 3 -->
-	<section class="flex flex-col items-center py-8 lg:px-2 text-white w-full">
-		<div class="text-center text-2xl mb-7 mt-4">
+	<section
+		class="flex flex-col items-center py-8 lg:px-2 text-white lg:w-5/6"
+	>
+		<div class="text-center text-2xl mb-7 mt-4 px-2">
 			<h2>
 				Adquiere el <span class="text-amber-600">conocimiento</span> y ventajas
 				de formar parte del <span class="text-amber-600">curso</span>
@@ -169,7 +171,7 @@ import Infobutton from "../components/Infobutton.astro";
 		</div>
 
 		<div
-			class="flex flex-col gap-x-4 px-2 sm:px-2 xl:gap-x-0 md:flex-row justify-around w-full"
+			class="flex flex-col gap-x-4 px-2 sm:px-2 xl:gap-x-0 md:flex-row justify-around sm:w-full"
 		>
 			{
 				enlaces.map((enlace) => {
@@ -187,12 +189,12 @@ import Infobutton from "../components/Infobutton.astro";
 
 	<!-- SECCION 4 -->
 	<section
-		class="flex gap-4 p-8 m-auto items-center text-white w-full justify-around"
+		class="flex gap-4 p-8 w-5/6 items-center text-white justify-around lg:w-full"
 	>
 		<div class="hidden xl:block xl:w-2/5 pl-28">
 			<h1 class="text-5xl w-1/2">Preguntas frecuentes</h1>
 		</div>
-		<div class="flex flex-col xl:w-3/5">
+		<div class="flex flex-col w-full xl:w-3/5">
 			{
 				preguntas.map((pregunta) => {
 					return (

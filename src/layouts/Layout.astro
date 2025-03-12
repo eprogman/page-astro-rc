@@ -18,24 +18,24 @@ const { title } = Astro.props;
 		<title>Page - {title}</title>
 	</head>
 	<body
-		class="p-0 font-sans text-2xl box-border bg-gradient-to-bl from-[#0f172a] via-[#1e1a78] to-[#0f172a] m-auto relative"
+		class="box-border bg-gradient-to-bl from-[#0f172a] via-[#1e1a78] to-[#0f172a] relative"
 	>
 		<header
-			class="sticky w-screen top-0 right-0 left-0 bg-gradient-to-b from-[#06b6d4] via-[#2563eb] to-[#6366f1]"
+			class="sticky px-3 top-0 right-0 left-0 bg-gradient-to-b from-[#06b6d4] via-[#2563eb] to-[#6366f1]"
 		>
 			<div
-				class="flex flex-col gap-y-7 sm:flex-row justify-center sm:justify-around sm:items-center py-3"
+				class="flex flex-col gap-y-7 m-auto py-3 justify-center sm:flex-row sm:items-center"
 			>
-				<div class="ls:w-2/5">
+				<div class="max-w-28 m-auto">
 					<img
 						class="h-20 w-20 rounded-4xl m-auto"
 						src="../images/logo.png"
 						alt="l"
 					/>
 				</div>
-				<nav class="lg:w-3/5 flex justify-center items-center h-14">
+				<nav class="flex justify-center items-center h-14 sm:w-2/4">
 					<ul
-						class="flex justify-between items-center text-cyan-100 text-xl hover:text-cyan-50 gap-x-1 lg:w-1/2 sm:gap-x-2"
+						class="flex justify-between text-sm items-center text-cyan-100 gap-x-1 mr-4 hover:text-cyan-50 sm:text-xl lg:w-1/2 sm:gap-x-2"
 					>
 						<li>
 							<a
@@ -70,7 +70,7 @@ const { title } = Astro.props;
 			<slot />
 		</main>
 		<footer
-			class="grid h-auto gap-y-8 sm:gap-y-2 lg:grid-cols-3 lg:h-48 pt-5 bg-gradient-to-b from-[#06b6d4] via-[#2563eb] to-[#6366f1]"
+			class="grid h-auto gap-y-8 pt-5 sm:gap-y-2 lg:grid-cols-3 lg:h-48 bg-gradient-to-b from-[#06b6d4] via-[#2563eb] to-[#6366f1]"
 		>
 			<div class="flex flex-col items-center">
 				<h2
